@@ -48,11 +48,9 @@ def move_arm_callback(req):
     # parameters if you have already set the pose or joint target for the group
     group.set_start_state_to_current_state()
     group.go(joints_goal, wait=True)
-    print("Execution of arm motion start")
 
     # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-    print("Execution of arm motion stop")
     return True
 
 

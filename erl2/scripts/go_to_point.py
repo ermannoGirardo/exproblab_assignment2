@@ -60,7 +60,7 @@ lb_a = -0.5
 ub_d = 0.6
 
 ## Linear speed of the robot, can be modified via the callback of the subscriber to /velocities
-lin_vel = 0.3
+lin_vel = 1
 
 ## Angular speed of the robot, can be modified via the callback of the subscriber to /velocities
 ang_vel = 1
