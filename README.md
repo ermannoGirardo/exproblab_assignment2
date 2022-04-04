@@ -6,12 +6,15 @@
 Figure 1: Cluedo map of the original game
 
 ## II. Description:
-In this repository you can find a solution to a Cluedo like investigation game played by Sherlock robot.
-in wich took place the murder and finally killer_weapon is the name of the weapon.
-An hypothesis is complete if all the fields are filled, it is consistent if it is complete and only one name for each filed is present.
+In this repository you can find a solution of a Cluedo like investigation game played by Sherlock robot.
+Sherlock has to collect hints moving in the environment in a completely autonomous way.
+An hypothesis has the following structure: [ID, killer, killer_place, killer_weapon].
+Killer is the name of the murder, killer_place is the name of the room in wich took place the murder
+and finally killer_weapon is the name of the weapon used to complete the murder.
+An hypothesis is complete if all the fields are filled, it is consistent if it is complete and only one name for each field is present.
 In figure 2 and 3 you can see the simulation enviroment of Rviz and Gazebo respectively.
 IN the simulation are present 4 markers, in position [-3,0], [3,0], [0,3], [0,-3] to a random high of 0.75 or 1.25, (Figure 2).
-Once a marker is reached with the arm a new hint is generated, notice that sometimes a malformed hint could be generated.
+Once a marker is reached with Sherlock's arm a new hint is generated, notice that sometimes a malformed hint could be generated.
 
 
 ![Rviz](https://user-images.githubusercontent.com/48509825/161597045-612042ba-51df-43fa-bba0-c3e3dda0dcaf.jpeg)
