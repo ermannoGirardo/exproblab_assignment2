@@ -53,11 +53,11 @@
 	
 	<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
 		<arg name="pddl_action_name" value="take_hint" />
-	</include>-->
+	</include
 	
 	<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
 		<arg name="pddl_action_name" value="check_hypothesis" />
-	</include>
+	</include>>-->
 	
 	<!-- Implements all the actions interface: -->
 
@@ -79,7 +79,36 @@
 		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
 	</node>
 	
+	<!-- Initialize the system durative action mapping interface-->
+	<node name="rosplan_interface_initialization" pkg="my_rosplan_interface" type="initialization" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="pddl_action_name" value="initialization" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
 
+
+	<!-- Check hypothesis durative action mapping interface-->
+	<node name="rosplan_interface_check_hypothesis" pkg="my_rosplan_interface" type="check_hypothesis" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="pddl_action_name" value="check_hypothesis" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+	
+	<!-- Test hypothesis durative action mapping interface-->
+	<node name="rosplan_interface_test_hypothesis" pkg="my_rosplan_interface" type="test_hypothesis" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="pddl_action_name" value="test_hypothesis" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+	
+	<!-- Execute the node demanded for replanning and starts all the clients -->
+	<node name="update_knowledge_replan" pkg="erl2" type ="update_knowledge_replan.py"  output="screen" />
+	
+	<node name="replan" pkg="erl2" type ="replan.py"  output="screen" />
+	
 
 </launch>
 

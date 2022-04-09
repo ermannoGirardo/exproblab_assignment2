@@ -2,5 +2,5 @@
 <launch>
   <node name="go_to_point" pkg="erl2" type ="go_to_point.py"/>
   <node name="move_arm" pkg="erl2" type ="move_arm.py"  output="screen" />
-  <node name="perceive_hints" pkg="erl2" type ="perceive_hints.py"  output="screen" />
+  <node name="perceive_hints" pkg="erl2" type ="perceive_test_consistency.py"  output="screen" />
 </launch>
