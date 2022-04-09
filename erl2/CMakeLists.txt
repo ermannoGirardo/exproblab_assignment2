@@ -16,7 +16,6 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   actionlib
   actionlib_msgs
-  armor_msgs
   rosplan_planning_system
   geometry_msgs
   nav_msgs
@@ -72,6 +71,7 @@ add_service_files(
    Oracle.srv
    JointsArmGoal.srv
    ConsistentHypothesis.srv
+   Replan.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -84,7 +84,7 @@ add_service_files(
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
-   actionlib_msgs   std_msgs   armor_msgs std_srvs rosplan_knowledge_msgs
+   actionlib_msgs   std_msgs   std_srvs rosplan_knowledge_msgs
  )
 
 ################################################
@@ -177,7 +177,9 @@ add_dependencies(simulation ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTE
  catkin_install_python(PROGRAMS
    scripts/go_to_point.py
    scripts/move_arm.py
-   scripts/perceive_hints.py
+   scripts/perceive_test_consistency.py
+   scripts/update_knowledge_replan.py
+   scripts/replan.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 
