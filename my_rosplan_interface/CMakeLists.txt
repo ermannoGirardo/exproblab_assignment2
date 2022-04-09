@@ -130,13 +130,17 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
  add_executable(go_to_waypoint src/go_to_waypoint.cpp)
  add_executable(take_hint src/take_hint.cpp)
- 
+ add_executable(initialization src/initialization.cpp)
+ add_executable(check_hypothesis src/check_hypothesis.cpp)
+ add_executable(test_hypothesis src/test_hypothesis.cpp)
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
  add_dependencies(go_to_waypoint ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  add_dependencies(take_hint ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
+ add_dependencies(initialization ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(check_hypothesis ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(test_hypothesis ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -156,6 +160,16 @@ include_directories(
    ${catkin_LIBRARIES}
  )
 
+target_link_libraries(initialization
+   ${catkin_LIBRARIES}
+ )
+ 
+ target_link_libraries(check_hypothesis
+   ${catkin_LIBRARIES}
+ )
+ target_link_libraries(test_hypothesis
+   ${catkin_LIBRARIES}
+ )
 #############
 ## Install ##
 #############
