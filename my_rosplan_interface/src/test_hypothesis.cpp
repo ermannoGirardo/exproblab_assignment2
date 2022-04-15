@@ -3,6 +3,7 @@
 * \brief test an hypothesis going to the oracle
 * \author Ermanno Girardo
 * \version 1.0
+* \date 15/04/2022
 *
 * Clients : <BR>
 *   /oracle_solution
@@ -89,6 +90,10 @@ namespace KCL_rosplan {
 				std::cout << "Yes Sherlock you are the best!!" << std::endl;
 				std::cout <<"You have found the solution!!"<<std::endl;
 				solution_ID = i;
+				break;
+			}
+			else{
+				printf("No the solution is not ID: %d!\n",i);
 			}
 		}
 		

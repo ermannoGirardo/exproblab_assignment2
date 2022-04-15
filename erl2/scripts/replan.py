@@ -5,6 +5,7 @@
 #   \brief Cancel the current plan in order to force replan
 #   \author Ermanno Girardo
 #   \version 1.0
+#   \date 15/04/2022
 #
 #
 #   Services: <BR>

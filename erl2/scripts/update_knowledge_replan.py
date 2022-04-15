@@ -5,6 +5,7 @@
 #   \brief Create all the ROSPlan clients and update knowledge base
 #   \author Ermanno Girardo
 #   \version 1.0
+#   \date 15/04/2022
 #
 #
 #   Clients : <BR>
@@ -102,12 +103,12 @@ def update_goal(attribute_name,key,value,is_negative):
 
 def says_hp_callback(solution_id):
    '''Receive the ID of the final correct hypothesis'''
-   global true_hp_id
-   true_hp_id = solution_id
+   global true_hp_ID
+   true_hp_ID = solution_id
 
 def main():
     """main of the update_knowledge_replan  node, start the game and force replanning until the solution has been found  """
-    global update_knowledge_client
+    global update_knowledge_client , true_hp_id
     rospy.init_node('update_knowledge_replan',anonymous=True)
     # Wait for all rosplan services
     rospy.wait_for_service('rosplan_problem_interface/problem_generation_server')

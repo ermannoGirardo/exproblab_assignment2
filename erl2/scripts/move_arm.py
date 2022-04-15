@@ -5,6 +5,7 @@
 #   \brief This is the node demanded to move the arm thanks to MoveIt PKG 
 #   \author Ermanno Girardo
 #   \version 1.0
+#   \date 15/04/2022
 #
 #
 #   Services: <BR>

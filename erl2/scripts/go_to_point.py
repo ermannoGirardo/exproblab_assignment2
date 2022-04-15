@@ -5,7 +5,7 @@
 #   \brief This node implement the go_to_point action
 #   \author Ermanno Girardo
 #   \version 1.0
-#   \date 20/11/2021
+#   \date 15/04/2022
 #
 #   \details
 #
@@ -173,25 +173,7 @@ def done():
     twist_msg.angular.z = 0
     pub_.publish(twist_msg)
 
-"""    
-def go_to_point(req):
-    desired_position = Point()
-    desired_position.x = req.x
-    desired_position.y = req.y
-    des_yaw = req.theta
-    change_state(0)
-    while True:
-    	if state_ == 0:
-    		fix_yaw(desired_position)
-    	elif state_ == 1:
-    		go_straight_ahead(desired_position)
-    	elif state_ == 2:
-    		fix_final_yaw(des_yaw)
-    	elif state_ == 3:
-    		done()
-    		break
-    return True
-"""  
+
 #action server callback
 def go_to_point(goal):
     """This is the callback of the action server, guide the robot to the goal, if the goal is canceled the robot stops"""

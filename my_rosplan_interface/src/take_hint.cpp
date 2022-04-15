@@ -3,6 +3,7 @@
 * \brief  This is the client for moving the robot arm
 * \author Ermanno Girardo
 * \version 1.0
+* \date 15/04/2022
 *
 *  Clients : <BR>
 *    /move_arm_client
@@ -35,12 +36,15 @@ namespace KCL_rosplan {
 		std::cout << "I am taking the hint of: " << msg->parameters[0].value << std::endl;
 		//In order to stop the arm shaking wait 2 sec
 		usleep(2000000); 
+		//Set cartesian joints to reach the marker
 		erl2:: JointsArmGoal goal;
 		goal.request.joint0 = -3.14/2;
 		goal.request.joint1 = -0.5;
-		goal.request.joint2 = -3.14/2;
+		goal.request.joint2 = -1;
 		goal.request.joint3 = 0;
+		//Call the service to move the arm
 		move_arm_client.call(goal);
+		//Set cartesian joints to extend the arm
 		goal.request.joint1 = 0;
 		goal.request.joint2 = 0;
 		move_arm_client.call(goal);

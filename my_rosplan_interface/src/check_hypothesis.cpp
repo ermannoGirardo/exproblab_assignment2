@@ -4,6 +4,7 @@
 * \brief check hypothesis acquired
 * \author Ermanno Girardo
 * \version 1.0
+* \date 15/04/2022
 *
 * Clients : <BR>
 *   /test_consistency
