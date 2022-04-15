@@ -1,0 +1,52 @@
+\hypertarget{replan_8py}{}\doxysection{scripts/replan.py File Reference}
+\label{replan_8py}\index{scripts/replan.py@{scripts/replan.py}}
+
+
+Cancel the current plan in order to force replan.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{replan_8py_aaa77be56642998ed7faa34b1493ac5d6}{replan.\+replan\+\_\+callback}} (req)
+\item 
+def \mbox{\hyperlink{replan_8py_a730747e40ffeb4efa3bbd0770d6d664c}{replan.\+main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cancel the current plan in order to force replan. 
+
+\begin{DoxyAuthor}{Author}
+Ermanno Girardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/04/2022
+\end{DoxyDate}
+Services\+: ~\newline
+ /replan\+\_\+service
+
+Description\+: ~\newline
+
+
+This node provide a service to cancel the current plan and force a replan trough the node update\+\_\+knowledge\+\_\+replan 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{replan_8py_a730747e40ffeb4efa3bbd0770d6d664c}\label{replan_8py_a730747e40ffeb4efa3bbd0770d6d664c}} 
+\index{replan.py@{replan.py}!main@{main}}
+\index{main@{main}!replan.py@{replan.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def replan.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}main of the replan node\end{DoxyVerb}
+ \mbox{\Hypertarget{replan_8py_aaa77be56642998ed7faa34b1493ac5d6}\label{replan_8py_aaa77be56642998ed7faa34b1493ac5d6}} 
+\index{replan.py@{replan.py}!replan\_callback@{replan\_callback}}
+\index{replan\_callback@{replan\_callback}!replan.py@{replan.py}}
+\doxysubsubsection{\texorpdfstring{replan\_callback()}{replan\_callback()}}
+{\footnotesize\ttfamily def replan.\+replan\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback of the replan service. It is demanded to cancel plan in order create a new plan to perceive new hypothesis\end{DoxyVerb}
+ 

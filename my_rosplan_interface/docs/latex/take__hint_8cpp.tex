@@ -1,0 +1,51 @@
+\hypertarget{take__hint_8cpp}{}\doxysection{src/take\+\_\+hint.cpp File Reference}
+\label{take__hint_8cpp}\index{src/take\_hint.cpp@{src/take\_hint.cpp}}
+
+
+This is the client for moving the robot arm.  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+rosplan\+\_\+interface/take\+\_\+hint.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/simple\+\_\+action\+\_\+client.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/terminal\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/go\+\_\+to\+\_\+point\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Joints\+Arm\+Goal.\+h$>$}\newline
+Include dependency graph for take\+\_\+hint.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{take__hint_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{take__hint_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{take__hint_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int \mbox{\hyperlink{take__hint_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em This node move the arm of the robot to reach the hint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{take__hint_8cpp_ac68181ac5e114deea4a97ffc7aebcd5e}\label{take__hint_8cpp_ac68181ac5e114deea4a97ffc7aebcd5e}} 
+ros\+::\+Service\+Client {\bfseries move\+\_\+arm\+\_\+client}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the client for moving the robot arm. 
+
+\begin{DoxyAuthor}{Author}
+Ermanno Girardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/04/2022
+\end{DoxyDate}
+Clients \+: ~\newline
+ /move\+\_\+arm\+\_\+client Description \+:
+
+This client want to move the robot arm specifing the values for each joint. The motion will be provided implementing a service to move the arm thanks to moveit pkg 

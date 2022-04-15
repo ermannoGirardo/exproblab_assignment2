@@ -1,0 +1,66 @@
+\hypertarget{check__hypothesis_8cpp}{}\doxysection{src/check\+\_\+hypothesis.cpp File Reference}
+\label{check__hypothesis_8cpp}\index{src/check\_hypothesis.cpp@{src/check\_hypothesis.cpp}}
+
+
+check hypothesis acquired  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+rosplan\+\_\+interface/check\+\_\+hypothesis.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/simple\+\_\+action\+\_\+client.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/terminal\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/go\+\_\+to\+\_\+point\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Joints\+Arm\+Goal.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Consistent\+Hypothesis.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Replan.\+h$>$}\newline
+Include dependency graph for check\+\_\+hypothesis.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check__hypothesis_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{check__hypothesis_8cpp_aec54b7aa0173c339120b7c8e45721f3d}\label{check__hypothesis_8cpp_aec54b7aa0173c339120b7c8e45721f3d}} 
+bool {\bfseries is\+\_\+one\+\_\+consistent} ()
+\item 
+\mbox{\Hypertarget{check__hypothesis_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{check__hypothesis_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{check__hypothesis_8cpp_a235c1aa7bd0483f7636697e66cddc9ae}\label{check__hypothesis_8cpp_a235c1aa7bd0483f7636697e66cddc9ae}} 
+ros\+::\+Service\+Client {\bfseries consistent\+\_\+hp\+\_\+client}
+\item 
+\mbox{\Hypertarget{check__hypothesis_8cpp_a7ff29cb32d0975a11126872008e95cbc}\label{check__hypothesis_8cpp_a7ff29cb32d0975a11126872008e95cbc}} 
+ros\+::\+Service\+Client {\bfseries replan\+\_\+client}
+\item 
+\mbox{\Hypertarget{check__hypothesis_8cpp_ab9c30f0bb84da79d34e636e77bc8e922}\label{check__hypothesis_8cpp_ab9c30f0bb84da79d34e636e77bc8e922}} 
+erl2\+::\+Consistent\+Hypothesis {\bfseries cons\+\_\+hp\+\_\+srv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+check hypothesis acquired 
+
+\begin{DoxyAuthor}{Author}
+Ermanno Girardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/04/2022
+\end{DoxyDate}
+Clients \+: ~\newline
+ /test\+\_\+consistency
+
+/replan\+\_\+srv
+
+Description \+:
+
+This node check the acquired hypothesis to test its consistency. If no one hypothesis is consistent trigger replanning 

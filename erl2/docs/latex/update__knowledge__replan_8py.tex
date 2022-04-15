@@ -1,0 +1,103 @@
+\hypertarget{update__knowledge__replan_8py}{}\doxysection{scripts/update\+\_\+knowledge\+\_\+replan.py File Reference}
+\label{update__knowledge__replan_8py}\index{scripts/update\_knowledge\_replan.py@{scripts/update\_knowledge\_replan.py}}
+
+
+Create all the R\+O\+S\+Plan clients and update knowledge base.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{update__knowledge__replan_8py_a2b5392b10cdef3ad8668b6ccc285e7f5}{update\+\_\+knowledge\+\_\+replan.\+update\+\_\+predicate}} (is\+\_\+negative, attribute\+\_\+name, key, value)
+\item 
+def \mbox{\hyperlink{update__knowledge__replan_8py_a26a450c3d37109926ab6da26f06ccf90}{update\+\_\+knowledge\+\_\+replan.\+update\+\_\+instance}} (instance\+\_\+name, instance\+\_\+type)
+\item 
+def \mbox{\hyperlink{update__knowledge__replan_8py_aa95c26c292ed6131df176918f3349249}{update\+\_\+knowledge\+\_\+replan.\+update\+\_\+goal}} (attribute\+\_\+name, key, value, is\+\_\+negative)
+\item 
+def \mbox{\hyperlink{update__knowledge__replan_8py_ade9a341f204745332a482509e20b944a}{update\+\_\+knowledge\+\_\+replan.\+says\+\_\+hp\+\_\+callback}} (solution\+\_\+id)
+\item 
+def \mbox{\hyperlink{update__knowledge__replan_8py_ae89685ba497a44362e8e625f083f1230}{update\+\_\+knowledge\+\_\+replan.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{update__knowledge__replan_8py_ad13d9441070afb83ad439b085e0aba68}\label{update__knowledge__replan_8py_ad13d9441070afb83ad439b085e0aba68}} 
+{\bfseries update\+\_\+knowledge\+\_\+replan.\+update\+\_\+knowledge\+\_\+client} = None
+\item 
+\mbox{\Hypertarget{update__knowledge__replan_8py_a84b3671194aac8102bbb6fd61188b6ff}\label{update__knowledge__replan_8py_a84b3671194aac8102bbb6fd61188b6ff}} 
+int {\bfseries update\+\_\+knowledge\+\_\+replan.\+true\+\_\+hp\+\_\+\+ID} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Create all the R\+O\+S\+Plan clients and update knowledge base. 
+
+\begin{DoxyAuthor}{Author}
+Ermanno Girardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/04/2022
+\end{DoxyDate}
+Clients \+: ~\newline
+ \begin{DoxyVerb} /rosplan_problem_interface/problem_generation_server
+
+ /rosplan_planner_interface/planning_server
+
+ /rosplan_parsing_interface/parse_plan
+
+ /rosplan_plan_dispatcher/dispatch_plan
+
+ /rosplan_knowledge_base/update
+
+ /rosplan_knowledge_base/clear
+\end{DoxyVerb}
+
+
+Subscriber \+: ~\newline
+ /says\+\_\+hp
+
+Description\+: ~\newline
+
+
+This node create all the R\+O\+S\+Plan clients and allow replanning if occurred update the knowledge base 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{update__knowledge__replan_8py_ae89685ba497a44362e8e625f083f1230}\label{update__knowledge__replan_8py_ae89685ba497a44362e8e625f083f1230}} 
+\index{update\_knowledge\_replan.py@{update\_knowledge\_replan.py}!main@{main}}
+\index{main@{main}!update\_knowledge\_replan.py@{update\_knowledge\_replan.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def update\+\_\+knowledge\+\_\+replan.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}main of the update_knowledge_replan  node, start the game and force replanning until the solution has been found  \end{DoxyVerb}
+ \mbox{\Hypertarget{update__knowledge__replan_8py_ade9a341f204745332a482509e20b944a}\label{update__knowledge__replan_8py_ade9a341f204745332a482509e20b944a}} 
+\index{update\_knowledge\_replan.py@{update\_knowledge\_replan.py}!says\_hp\_callback@{says\_hp\_callback}}
+\index{says\_hp\_callback@{says\_hp\_callback}!update\_knowledge\_replan.py@{update\_knowledge\_replan.py}}
+\doxysubsubsection{\texorpdfstring{says\_hp\_callback()}{says\_hp\_callback()}}
+{\footnotesize\ttfamily def update\+\_\+knowledge\+\_\+replan.\+says\+\_\+hp\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{solution\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Receive the ID of the final correct hypothesis\end{DoxyVerb}
+ \mbox{\Hypertarget{update__knowledge__replan_8py_aa95c26c292ed6131df176918f3349249}\label{update__knowledge__replan_8py_aa95c26c292ed6131df176918f3349249}} 
+\index{update\_knowledge\_replan.py@{update\_knowledge\_replan.py}!update\_goal@{update\_goal}}
+\index{update\_goal@{update\_goal}!update\_knowledge\_replan.py@{update\_knowledge\_replan.py}}
+\doxysubsubsection{\texorpdfstring{update\_goal()}{update\_goal()}}
+{\footnotesize\ttfamily def update\+\_\+knowledge\+\_\+replan.\+update\+\_\+goal (\begin{DoxyParamCaption}\item[{}]{attribute\+\_\+name,  }\item[{}]{key,  }\item[{}]{value,  }\item[{}]{is\+\_\+negative }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add a goal into the knowledge base\end{DoxyVerb}
+ \mbox{\Hypertarget{update__knowledge__replan_8py_a26a450c3d37109926ab6da26f06ccf90}\label{update__knowledge__replan_8py_a26a450c3d37109926ab6da26f06ccf90}} 
+\index{update\_knowledge\_replan.py@{update\_knowledge\_replan.py}!update\_instance@{update\_instance}}
+\index{update\_instance@{update\_instance}!update\_knowledge\_replan.py@{update\_knowledge\_replan.py}}
+\doxysubsubsection{\texorpdfstring{update\_instance()}{update\_instance()}}
+{\footnotesize\ttfamily def update\+\_\+knowledge\+\_\+replan.\+update\+\_\+instance (\begin{DoxyParamCaption}\item[{}]{instance\+\_\+name,  }\item[{}]{instance\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add an instance into the knowledge base\end{DoxyVerb}
+ \mbox{\Hypertarget{update__knowledge__replan_8py_a2b5392b10cdef3ad8668b6ccc285e7f5}\label{update__knowledge__replan_8py_a2b5392b10cdef3ad8668b6ccc285e7f5}} 
+\index{update\_knowledge\_replan.py@{update\_knowledge\_replan.py}!update\_predicate@{update\_predicate}}
+\index{update\_predicate@{update\_predicate}!update\_knowledge\_replan.py@{update\_knowledge\_replan.py}}
+\doxysubsubsection{\texorpdfstring{update\_predicate()}{update\_predicate()}}
+{\footnotesize\ttfamily def update\+\_\+knowledge\+\_\+replan.\+update\+\_\+predicate (\begin{DoxyParamCaption}\item[{}]{is\+\_\+negative,  }\item[{}]{attribute\+\_\+name,  }\item[{}]{key,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates the predicate into the knowledge base\end{DoxyVerb}
+ 

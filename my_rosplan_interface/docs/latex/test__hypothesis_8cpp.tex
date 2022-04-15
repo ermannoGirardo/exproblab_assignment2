@@ -1,0 +1,82 @@
+\hypertarget{test__hypothesis_8cpp}{}\doxysection{src/test\+\_\+hypothesis.cpp File Reference}
+\label{test__hypothesis_8cpp}\index{src/test\_hypothesis.cpp@{src/test\_hypothesis.cpp}}
+
+
+test an hypothesis going to the oracle  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+rosplan\+\_\+interface/test\+\_\+hypothesis.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/simple\+\_\+action\+\_\+client.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/terminal\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/go\+\_\+to\+\_\+point\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Joints\+Arm\+Goal.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Consistent\+Hypothesis.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Replan.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Oracle.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Int32.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+hypothesis.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__hypothesis_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{test__hypothesis_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_a18585f972eac79cac5e352ad44cff1a0}\label{test__hypothesis_8cpp_a18585f972eac79cac5e352ad44cff1a0}} 
+ros\+::\+Service\+Client {\bfseries cons\+\_\+hp\+\_\+client}
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_a798ee27eb1bd19aa48e94f203d3b96f6}\label{test__hypothesis_8cpp_a798ee27eb1bd19aa48e94f203d3b96f6}} 
+ros\+::\+Service\+Client {\bfseries test\+\_\+hp\+\_\+client}
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_a0f2b5493593fcee9ff927aa4d658743b}\label{test__hypothesis_8cpp_a0f2b5493593fcee9ff927aa4d658743b}} 
+int {\bfseries solution\+\_\+\+ID} = -\/1
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_a1f91ded7b6dc553ae6fd957912186570}\label{test__hypothesis_8cpp_a1f91ded7b6dc553ae6fd957912186570}} 
+std\+\_\+msgs\+::\+Int32 {\bfseries say\+\_\+hp\+\_\+\+ID}
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_ab9c30f0bb84da79d34e636e77bc8e922}\label{test__hypothesis_8cpp_ab9c30f0bb84da79d34e636e77bc8e922}} 
+erl2\+::\+Consistent\+Hypothesis {\bfseries cons\+\_\+hp\+\_\+srv}
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_a0bff8b9be42c2be5f8db78f3a4ca9032}\label{test__hypothesis_8cpp_a0bff8b9be42c2be5f8db78f3a4ca9032}} 
+erl2\+::\+Oracle {\bfseries oracle\+\_\+\+ID}
+\item 
+\mbox{\Hypertarget{test__hypothesis_8cpp_a0b610ed9157fbcb8e7c1a1f496323274}\label{test__hypothesis_8cpp_a0b610ed9157fbcb8e7c1a1f496323274}} 
+ros\+::\+Publisher {\bfseries solution\+\_\+pub}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+test an hypothesis going to the oracle 
+
+\begin{DoxyAuthor}{Author}
+Ermanno Girardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/04/2022
+\end{DoxyDate}
+Clients \+: ~\newline
+ /oracle\+\_\+solution /test consistency
+
+Action\+Clients \+: ~\newline
+ /go\+\_\+to\+\_\+point
+
+Publisher \+: ~\newline
+ /says\+\_\+hp
+
+Description \+:
+
+Once an hypothesis is consistent this node action first force the robot to go in the centre of the arena (oracle room) and then compare the ID of the consistent hypothesis to test its truthfulness. If the hypothesis is wrong then cancel it. 

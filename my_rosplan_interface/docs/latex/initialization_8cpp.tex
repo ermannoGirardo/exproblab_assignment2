@@ -1,0 +1,53 @@
+\hypertarget{initialization_8cpp}{}\doxysection{src/initialization.cpp File Reference}
+\label{initialization_8cpp}\index{src/initialization.cpp@{src/initialization.cpp}}
+
+
+extend the arm at first and then move the robot  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+rosplan\+\_\+interface/initialization.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/simple\+\_\+action\+\_\+client.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/terminal\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/go\+\_\+to\+\_\+point\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$erl2/\+Joints\+Arm\+Goal.\+h$>$}\newline
+Include dependency graph for initialization.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{initialization_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{initialization_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{initialization_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int \mbox{\hyperlink{initialization_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Initialize the investigation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{initialization_8cpp_ac68181ac5e114deea4a97ffc7aebcd5e}\label{initialization_8cpp_ac68181ac5e114deea4a97ffc7aebcd5e}} 
+ros\+::\+Service\+Client {\bfseries move\+\_\+arm\+\_\+client}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+extend the arm at first and then move the robot 
+
+\begin{DoxyAuthor}{Author}
+Ermanno Girardo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+Clients \+: ~\newline
+ /move\+\_\+arm\+\_\+service
+
+Action\+Clients \+: ~\newline
+ /go\+\_\+to\+\_\+point
+
+Description \+:
+
+This node has the purpose of initialize the investigation. In particular at start it extends the arm and then move the robot to wp. 
