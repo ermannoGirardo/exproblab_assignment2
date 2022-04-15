@@ -153,4 +153,9 @@ So, first you have to install gnome terminal, if you haven't yet:
   
 Sometimes MoveIt fails to move the arm. This is not a problem in this particular scenario, but is possible to fix this problem implementing a recory action.
 
-
+## VIII About the Author
+**Robotics Engineer** @Università degli Studi di Genova via Opera Pia. 
+**Phone number:** 3451552733
+**Email:** girardoermanno@gmail.com
+**GitHub Page:** [Click Here](https://github.com/ermannoGirardo)
+**Assignment 3:** [Click Here](https://github.com/ermannoGirardo/exproblab_assignment3)
