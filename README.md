@@ -60,7 +60,7 @@ The assignment is composed by three main packages:
             It is a FSM in wich the first state adjust the orientation with respect to the target. The second phase publish a linear velocity
             until the target is reached. Once the target is reached the third and final state adjust the final orientation of the robot.
 * **move_arm.py** is the node demanded to move Sherlock arm. Thanks to MoveIt! this node simply take the joints configuration wanted and then 
-            planning the trajectory (in joint space) thanks to Sherlock MoveIt! pkg ad hoc developed.
+            planning the trajectory (in joint space-FK) thanks to Sherlock MoveIt! pkg ad hoc developed.
 * **update_knowledge_replan.py** this node is demanded to initialize ROSPlan generating all the clients (problem_interface, planner interface
             parsing interface and plan_dispatcher). Although this node has the scope of replanning until the solution is found.
 * **replan.py** this node is demanded to cancel the current plan and to force a replan
@@ -129,7 +129,7 @@ roslaunch erl2 services.launch
 ```
 roslaunch erl2 rosplan.lauch
 ```
-!!! Launch the files in this specific sequence!!! If you don't want to see all the warning messages you can add **2</dev/null** after each commands.
+!!! Launch the files in this specific sequence!!! If you don't want to see all the warning messages you can add **2</dev/null** after each command.
 
 * If you want there is also a bash file that execute all for you.
 So, first you have to install gnome terminal, if you haven't yet:
