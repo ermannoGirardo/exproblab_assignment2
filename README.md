@@ -99,7 +99,7 @@ The Oracle (already implemented), once the e.e is into a Marker, provide a hint 
 The Oracle knows also the final solution ID, that Sherlock has to collect during the game
 
 ### Documentation
-It is also present Doxygen documentation for erl2 and my_action_interface. In particular you can find docs folder for each of the two pkgs
+It is also present Doxygen documentation for erl2 and my_action_interface. docs/html/**index.html**
 
 ### Sequence Diagram
 
