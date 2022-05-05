@@ -88,11 +88,12 @@ The problem file **problem.pddl** into **erl2** pkg into **common** folder, spec
 For each plan the goal will be to say an hypothesis to the oracle, of course this action will be executed only if at least one hypothesis is completed and consistent.
 
 ### Launch Files
-* **sherlock_moveit/launch/demo_gazebo.launch** is demanded to execute all the moveit plugins and controllers for the arm and spawns Sherlock into the predefined Gazebo scene. It also executes the **assignment.launch** file already developed to spawn Rviz with the markers and execute the **simulation.cpp** file already developed to source the Oracle.
+* **sherlock_moveit/launch/demo_gazebo.launch** is demanded to execute all the moveit plugins and controllers for the arm and spawns Sherlock into the predefined Gazebo scene. It also executes the **assignment.launch** file already developed to spawn Rviz with the markers and execute the **simulation.cpp** file already developed to source the Oracle node.
 * **erl2/launch/services.launch** is demanded to execute the three services: go_to_point.py, move_arm.py and perceive_test_consistency.py needed for the simulation.
 * **erl2/launch/rosplan.launch** is demanded to source the domain and problem pddl files into ROSPlan and to execute all ROSPlan components.
                                  It also specifies for each pddl durative action its corresponding action interface.
-                                
+* **launch_all_investigation** executable that launch the two above launch files with a bit of deelay
+                              
 ### Oracle
 The Oracle (already implemented), once the e.e is into a Marker, provide a hint randomly. Hints can be malformed or incompleted or repetitive.
 The Oracle knows also the final solution ID, that Sherlock has to collect during the game
