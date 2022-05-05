@@ -154,7 +154,7 @@ So, first you have to install gnome terminal, if you haven't yet:
   * avoiding that the oracle repeats the hints
   * once an hypothesis is not consistent is useless to acquire hints about that hypothesis
   
-Sometimes MoveIt fails to move the arm. This is not a problem in this particular scenario, but is possible to fix this problem implementing a recory action.
+Sometimes MoveIt fails to move the arm. This is not a problem in this particular scenario, but is possible to fix this problem implementing a recovery action.
 
 ## VIII About the Author
 **Robotics Engineer** @Università degli Studi di Genova via Opera Pia. 
