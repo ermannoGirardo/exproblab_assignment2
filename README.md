@@ -110,6 +110,7 @@ It is also present Doxygen documentation for erl2 and my_action_interface. docs/
 
 ### Video
 In the repo you can find the demonstrative accelerated video (**SpeedAssignment2Video.mp4**) of the simulation.
+If you don't want to download the video, [ClickHere!](https://unigeit-my.sharepoint.com/:v:/g/personal/s4506472_studenti_unige_it/Ec63UMzhJmJCvZkIPSoI1E4BGB4N7ezUqN91WxHEu1nJKA?e=vKV7zm) to see it online.
 
 
 
