@@ -108,6 +108,10 @@ It is also present Doxygen documentation for erl2 and my_action_interface. docs/
 ![Sequence_Diagram](https://user-images.githubusercontent.com/48509825/163598843-555b7446-d650-433a-9538-1edb64e50c86.png)
 
 
+### Video
+In the repo you can find the demonstrative accelerated video (**SpeedAssignment2Video.mp4**) of the simulation.
+
+
 
 ## VI. How to run the simulation
 * If you are not familiar with ROSPlan, I suggest you to see its GitHub page and download it --> [ROSPlan](https://github.com/KCL-Planning/ROSPlan).
