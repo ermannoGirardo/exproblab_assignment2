@@ -164,14 +164,19 @@ So, first you have to install gnome terminal, if you haven't yet:
 ## VIII System Limitations and Possible Improvements
   The investigation is very long. It is possible to reduce investigation time in the following ways:
   
-            i) avoiding that the oracle generates malformed hints
-            ii) avoiding that the oracle repeats the hints
-            iii) once an hypothesis is not consistent is useless to acquire hints about that hypothesis
+  i) avoiding that the oracle generates malformed hints
+  
+  ii) avoiding that the oracle repeats the hints
+  
+  iii) once an hypothesis is not consistent is useless to acquire hints about that hypothesis
             
   In order to fix these limitations it is possible to:
-            i) Modify the Oracle introducing an if statement, if the hint is malformed ask another hint until it is not malformed.
-            ii) Store all the hints that the Oracle has given until now and check that the next hint it is not already given
-            iii) Add an if statement in order to avoid that the Oracle generates a new hint for an inconsistent hypothesis
+  
+  i) Modify the Oracle introducing an if statement, if the hint is malformed ask another hint until it is not malformed.
+  
+  ii) Store all the hints that the Oracle has given until now and check that the next hint it is not already given
+
+  iii) Add an if statement in order to avoid that the Oracle generates a new hint for an inconsistent hypothesis
   
   Sometimes MoveIt fails to move the arm. This is not a problem in this particular scenario, but is possible to fix this problem implementing a recovery action that 
   before executing the go_to_point action check the position of the gripper.
@@ -182,7 +187,11 @@ So, first you have to install gnome terminal, if you haven't yet:
 
 ## IX About the Author
 **Robotics Engineer** @Università degli Studi di Genova via Opera Pia. 
+
 **Phone number:** 3451552733
+
 **Email:** girardoermanno@gmail.com
+
 **GitHub Page:** [Click Here](https://github.com/ermannoGirardo)
+
 **Assignment 3:** [Click Here](https://github.com/ermannoGirardo/exproblab_assignment3)
