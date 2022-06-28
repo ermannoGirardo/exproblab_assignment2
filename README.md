@@ -153,15 +153,32 @@ So, first you have to install gnome terminal, if you haven't yet:
   ./launch_all_investigation
   ```
   
-  ## VII Drawbacks
-  The investigation is very long. It is possible to reduce investigation time in the following ways:
-  * avoiding that the oracle generates malformed hints
-  * avoiding that the oracle repeats the hints
-  * once an hypothesis is not consistent is useless to acquire hints about that hypothesis
+## VII System Features
+  * Simulation planned by ROSPlan thanks to pddl domain and problem file.
+  * Replanner ready to make a new plan when the current plan is no more solvable
+  * Manipulation thanks to a custom URDF with five DoF arm
+  * Test hypotheses only when it is completed and consistent
   
-Sometimes MoveIt fails to move the arm. This is not a problem in this particular scenario, but is possible to fix this problem implementing a recovery action.
+  
+  
+## VIII System Limitations and Possible Improvements
+  The investigation is very long. It is possible to reduce investigation time in the following ways:
+  I. avoiding that the oracle generates malformed hints
+  II. avoiding that the oracle repeats the hints
+  III. once an hypothesis is not consistent is useless to acquire hints about that hypothesis
+  In order to fix these limitations it is possible to:
+  I. Modify the Oracle introducing an if statement, if the hint is malformed ask another hint until it is not malformed.
+  II. Store all the hints that the Oracle has given until now and check that the next hint it is not already given
+  III. Add an if statement in order to avoid that the Oracle generates a new hint for an inconsistent hypothesis
+  
+  Sometimes MoveIt fails to move the arm. This is not a problem in this particular scenario, but is possible to fix this problem implementing a recovery action that 
+  before executing the go_to_point action check the position of the gripper.
+  
+  ROSPlan visits always waypoints in the same order. In order to fix this limitation is possible, before replanning, store the last waypoint into the PDDL
+  problem file.
+  
 
-## VIII About the Author
+## IX About the Author
 **Robotics Engineer** @Università degli Studi di Genova via Opera Pia. 
 **Phone number:** 3451552733
 **Email:** girardoermanno@gmail.com
