@@ -163,7 +163,7 @@ So, first you have to install gnome terminal, if you haven't yet:
   
 ## VIII System Limitations and Possible Improvements
   The investigation is very long. It is possible to reduce investigation time in the following ways:
-  i) avoiding that the oracle generates malformed hints
+  I. avoiding that the oracle generates malformed hints
   ii) avoiding that the oracle repeats the hints
   iii) once an hypothesis is not consistent is useless to acquire hints about that hypothesis
   In order to fix these limitations it is possible to:
