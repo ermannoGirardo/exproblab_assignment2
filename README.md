@@ -30,6 +30,10 @@ The game ends when the oracle validates Sherlock solution.
 The peculiarity of this assignment is that the behaviour above descripted is no more managed as in the previous assignment trough a 
 FSM but in this case trough ROSPlan.
 
+
+![Assignment2GIF](https://user-images.githubusercontent.com/48509825/177191382-ea951201-aba9-40c9-a1b5-6f9b9991424b.gif)
+
+
 ## III. ROSPlan
 The ROSPlan framework provides a generic method for task planning in a ROS system. ROSPlan encapsulates both planning and dispatch. 
 It provides with a simple interface, and already includes interfaces to common ROS libraries.
